@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/jsProject/common.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/jsProject/static/fonts/gilroy.css" />
+    <title>Blog</title>
+  </head>
+  <body>
+    
+<header class="grid">
+  <button type="button" class="header-menu js-header-menu">
+    <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
+      <rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707"/>
+      <rect y="8.00006" width="32" height="4" rx="2" fill="#070707"/>
+      <rect y="16.0001" width="32" height="4" rx="2" fill="#070707"/>
+    </svg>
+  </button>
+  <nav class="navigation">
+    <ul class="nav-list no-dots">
+      <li class="nav-list__item"><a href="/jsProject/pages/blog/index.html">My Blog</a></li>
+      <li class="nav-list__item"><button class="button-js-signIn"  type="button">Sign in</button></li>
+      <li class="nav-list__item"><button class="button-js-register"  type="button">Register</button></li>
+      <li class="nav-list__item js-profile-link hidden"><a href="/jsProject/pages/profile/index.html">My Profile</a></li>
+      </ul>
+    <a class="navigation__home" href="/jsProject/index.html">Home</a> 
+</nav>
+
+</header>
+
+<div class="mobile-menu">
+  <svg class="mobile-menu__close modal-close" width="26" height="26" viewBox="0 0 26 26" fill="none">
+    <rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707"/>
+    <rect x="0.543945" y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0.543945 22.6289)" fill="#070707"/>
+  </svg>
+    <ul class="mobile-menu__list no-dots">
+      <li class="mobile-menu__item"><a href="/jsProject/index.html">Home</a></li>
+      <li class="mobile-menu__item"><a href="/jsProject/pages/blog/index.html">My Blog</a></li>
+      <li class="mobile-menu__item"><button class="button-js-signIn">Sign in</button></li>
+      <li class="mobile-menu__item"><button class="button-js-register">Register</button></li>
+      <li class="mobile-menu__item"><a href="/jsProject/pages/profile/index.html">My Profile</a></li>
+    </ul>
+</div>
+    <main class="grid">
+      <div class="scroll">
+        <button type="button" class="btn-scroll-up">
+          <img src="/jsProject/static/images/scroll-btn.svg" alt="">
+        </button>
+      </div>
+        <h1 class="blog-title">My blog</h1>
+        <section class="blog-filter">
+    <form name="filter" action="" class="blog-filter__form form-container">
+        <div class="blog-filter__selectors">
+            <div class="blog-filter__column tags">
+                <h4 class="blog-filter__titles">Tags</h4>
+                <div class="tags__checkbox-area">
+                    <input class="custom-checkbox__input" name="color" value="1" type="checkbox" id="filter-checkbox-colored1">
+                    <label for="filter-checkbox-colored1" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="2" type="checkbox" id="filter-checkbox-colored2">
+                    <label for="filter-checkbox-colored2" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="3" type="checkbox" id="filter-checkbox-colored3">
+                    <label for="filter-checkbox-colored3" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="4" type="checkbox" id="filter-checkbox-colored4">
+                    <label  for="filter-checkbox-colored4" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="5" type="checkbox" id="filter-checkbox-colored5">
+                    <label  for="filter-checkbox-colored5" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="6" type="checkbox" id="filter-checkbox-colored6">
+                    <label for="filter-checkbox-colored6" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="7" type="checkbox" id="filter-checkbox-colored7">
+                    <label for="filter-checkbox-colored7" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+
+                    <input class="custom-checkbox__input" name="color" value="8" type="checkbox" id="filter-checkbox-colored8">
+                    <label  for="filter-checkbox-colored8" class="custom-checkbox custom-checkbox_no-label custom-checkbox_colored"></label>
+                </div>
+            </div>
+
+            <div class="blog-filter__column views">
+                <h4 class="blog-filter__titles">Views</h4>
+                <div class="views__radio-buttons">
+
+                    <input class="custom-radio-input" type="radio" name="views" value="100-500" id="views-interval-first">
+                    <label class="views__radio custom-radio-label" for="views-interval-first">100-500</label>
+                    
+                    <input class="custom-radio-input" type="radio" name="views" value="500-1000" id="views-interval-second">
+                    <label class="views__radio custom-radio-label" for="views-interval-second">500-1000</label>
+
+                    <input class="custom-radio-input" type="radio" name="views" value="1000-2000" id="views-interval-third">
+                    <label class="views__radio custom-radio-label" for="views-interval-third">1000-2000</label>
+                </div>
+            </div>
+
+            <div class="blog-filter__column comments">
+                <h4 class="blog-filter__titles">Comments</h4>
+                <div class="comments__ckeckboxes">
+                    <input class="custom-checkbox__input" type="checkbox" name="comments" value="0" id="comments-checkbox-first">
+                    <label for="comments-checkbox-first" class="custom-checkbox comments__checkbox">0</label>
+
+                    <input class="custom-checkbox__input" type="checkbox" name="comments" value="0-1" id="comments-checkbox-second">
+                    <label for="comments-checkbox-second" class="custom-checkbox comments__checkbox">0-1</label>
+
+                    <input class="custom-checkbox__input" type="checkbox" name="comments" value="1-50" id="comments-checkbox-third">
+                    <label for="comments-checkbox-third" class="custom-checkbox comments__checkbox">1-50</label>
+                </div>
+            </div>
+
+            <div class="blog-filter__column show-amount">
+                <h4 class="blog-filter__titles">How show?</h4>
+                <div class="show-amount__radio-buttons">
+                    
+                    <input class="custom-radio-input" type="radio" name="limit" value="5" id="show-amount-first">
+                    <label class="show-amount__radio custom-radio-label" for="show-amount-first">show 5</label>
+                    
+                    <input class="custom-radio-input" type="radio" name="limit" value="10" id="show-amount-second">
+                    <label class="show-amount__radio custom-radio-label" for="show-amount-second">show 10</label>
+                </div>
+            </div>
+
+            <div class="blog-filter__column sorting">
+                <h4 class="blog-filter__titles">Sort by</h4>
+                <div class="sorting__radio">
+
+                    <input class="custom-radio-input" type="radio" name="sort" value="date" id="sorting-first">
+                    <label class="sorting__radio custom-radio-label" for="sorting-first" value="date">date</label>
+
+                    <input class="custom-radio-input" type="radio" name="sort" value="title" id="sorting-second">
+                    <label class="sorting__radio custom-radio-label" for="sorting-second" value="title">title</label>
+
+                    <input class="custom-radio-input" type="radio" name="sort" value="views" id="sorting-third">
+                    <label class="sorting__radio custom-radio-label" for="sorting-third" value="views">views</label>
+                </div>
+            </div>
+
+            <div class="blog-filter__column filter-reset">
+                <p class="filter-reset__label">reset form</p>
+                <button type="reset" class="js-filter-reset btn-white">Reset</button>
+            </div>
+        </div>
+
+        <div class="blog-filter__search">
+            <input name="searchField" class="blog-input-search custom-input" type="text">
+            <button type="submit" class="blog-filter__btn-submit btn-white">Search</button>
+        </div>
+    </form>
+</section>
+        
+        <section class="blog-posts">
+
+    <!-- <div class="blog-card">
+        <picture class="blog-card__picture">
+            <source srcset="https://academy.directlinedev.com${srcMobile}, ${srcMobile2x}" media="max-width:400px">
+            <source srcset="https://academy.directlinedev.com${srcTablet}, ${srcTablet2x}" media="max-width:900px">
+            <source srcset="https://academy.directlinedev.com/public/images/Blog1.jpg">
+            <img class="blog-card__picture-item" src="https://academy.directlinedev.com/public/images/Blog1.jpg" alt="">
+        </picture>
+        <div class="blog-card__wrapper">
+            <div class="blog-card__tags">
+
+            </div>
+            <div class="blog-card__description">
+                <div>${date}</div>
+                <div>${views}</div>
+                <div>${views}</div>
+                <div>${comments}</div>
+            </div>
+            <h3 class="blog-card__title">${title}</h3>
+            <p class="blog-card__text">${text}</p>
+            <a class="blog-card__link" href="#">Go to this post</a>
+        </div>
+    </div> -->
+
+    
+</section>
+
+        <div class="blog-posts-pagination">
+    <button class="slider-button slider-button_left">
+        <svg width="15" height="24" viewBox="0 0 15 24" fill="#070707">
+            <rect x="12.5791" y="23.6992" width="16.5512" height="3" rx="1.5" transform="rotate(-135 12.5791 23.6992)"/>
+            <rect x="14.7002" y="2.41992" width="16.5512" height="3" rx="1.5" transform="rotate(135 14.7002 2.41992)"/>
+            </svg>                    
+    </button>
+    <div class="blog-posts-pagination__page">
+        <!-- <a class="blog-posts-pagination__link" href=""></a> -->
+    </div>
+    <button class="slider-button slider-button_right">
+        <svg width="15" height="24" viewBox="0 0 15 24" fill="#070707">
+            <rect x="2.4209" y="0.300842" width="16.5512" height="3" rx="1.5" transform="rotate(45 2.4209 0.300842)"/>
+            <rect x="0.299805" y="21.5801" width="16.5512" height="3" rx="1.5" transform="rotate(-45 0.299805 21.5801)"/>
+            </svg>                    
+    </button>
+</div>
+
+    </main>
+    
+    <div class="another-background">
+        <footer>
+  <div class="contacts">
+    <h2 class="contacts__heading">Contacts</h2>
+    <p class="contacts__text">Want to know more or just chat?You are welcome!</p>
+    <button type="button" class="contacts__button btn-black button-js-send-message">Send message</button>
+  </div>
+  <div class="social">
+    <a href="https://www.instagram.com/serg_aleev/" class="social__item btn-white" target="_blank">Instagram</a>
+    <a href="https://vk.com/id155280580" class="social__item btn-white" target="_blank">Vk</a>
+    <a href="#" class="social__item btn-white">Telegram</a>
+    <a href="#" class="social__item btn-white">Mail</a>
+    <a href="https://github.com/SergeyAleev" class="social__item btn-white" target="_blank">GitHub</a>
+    <a href="#" class="social__item btn-white">Phone</a>
+  </div>
+  <div class="copyright">
+    <p class="copyright__first-line">Design by <a href="https://dlacademy.ru/" class="underline" target="_blank">DL Academy</a></p>
+    <p>Program code from Sergey</p>
+  </div>
+</footer>
+
+    </div>
+    
+    <div class="modal-background modal-sign-in">
+    <div class="modal-popup">
+        <form action="#" class="modal-content js-login-form">
+            <label for="email-modal-sign-in">Email<span class="required-field">*</span></label>
+            <input type="text" id="email-modal-sign-in" name="emailLog" class="custom-input required email">
+            <label for="password-modal-sign-in">Password<span class="required-field">*</span></label>
+            <input type="password" id="password-modal-sign-in" name="passwordLog" class="custom-input required">
+            <button type="submit" class="btn-white modal-content__button js-login-submit">Log in</button>
+        </form>
+        <svg class="modal-close" width="26" height="26" viewBox="0 0 26 26" fill="#828282">
+            <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)"/>
+            <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)"/>
+        </svg>    
+    </div>    
+</div>   
+    <div class="modal-background modal-register">
+    <div class="modal-popup">
+    <form class="modal-content js-register" action="">
+        <label for="email-modal-register">Email<span class="required-field">*</span></label>
+        <input type="text" id="email-modal-register" name="email" value="123" class="custom-input email required">
+        <div class="modal-two-column">
+            <div class="modal-row">
+                <label for="name-modal-register">Name<span class="required-field">*</span></label>
+                <input type="text" id="name-modal-register" name="name" class="custom-input required">
+            </div>
+            <div class="modal-row">
+                <label for="surname-modal-register">Surname<span class="required-field">*</span></label>
+                <input type="text" id="surname-modal-register" name="surname" class="custom-input required">
+            </div>
+        </div>
+        <div class="modal-two-column">
+            <div class="modal-row">
+                <label for="password-modal-register">Password<span class="required-field">*</span></label>
+                <input type="text" id="password-modal-register" name="password" class="custom-input required">
+            </div>
+            <div class="modal-row">
+                <label for="repeat-modal-register">Repeat password<span class="required-field">*</span></label>
+                <input type="text" id="repeat-modal-register" name="repeat-password" class="custom-input required">
+            </div>
+        </div>
+        <div class="modal-two-column">
+            <div class="modal-row">
+                <label for="location-modal-register">Location<span class="required-field">*</span></label>
+                <input type="text" id="location-modal-register" name="location" class="custom-input required">
+            </div>
+            <div class="modal-row">
+                <label for="age-modal-register">Age<span class="required-field">*</span></label>
+                <input type="text" id="age-modal-register" name="age" class="custom-input age required">
+            </div>
+        </div>
+        <div class="modal-register__ckeckbox">
+            <input class="custom-checkbox-mini-input" type="checkbox" id="checkbox-modal-register" checked>
+            <label class="custom-checkbox-mini" for="checkbox-modal-register">Clicking on the button, you consent to the processing of your personal data.</label>
+        </div>
+        <button type="submit" class="btn-white modal-content__button js-register-submit">Sign up</button>
+
+    </form>
+    <svg class="modal-close" width="26" height="26" viewBox="0 0 26 26" fill="#828282">
+        <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)"/>
+        <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)"/>
+    </svg>
+    </div>
+</div>
+    
+    <div class="modal-background modal-send-message">
+    <div class="modal-popup">
+    <form class="modal-content js-send-message" action="">
+    <div class="modal-two-column">
+        <div class="modal-row">
+            <label for="name-modal-sendMessage">What is your name?<span class="required-field">*</span></label>
+            <input type="text" id="name-modal-send-message" name="nameMessage" class="custom-input required">
+        </div>
+
+        <div class="modal-row">
+            <label for="subject-modal-send-message">Message subject<span class="required-field">*</span></label>
+            <input type="text" id="subject-modal-send-message" name="subjectMessage" class="custom-input required">
+        </div>
+    </div>
+    <div class="modal-two-column">
+        <div class="modal-row">
+            <label for="email-modal-send-message">Your Email<span class="required-field">*</span></label>
+            <input type="text" id="email-modal-send-message" name="emailMessage" class="custom-input email required">
+        </div>
+        <div class="modal-row">
+            <label for="phone-modal-send-message">Your mobile phone<span class="required-field">*</span></label>
+            <input type="phone" id="phone-modal-send-message" name="phoneMessage" class="custom-input required"> 
+        </div>
+
+    </div>
+    <label for="comment-modal-send-send-message">What do you want to discuss with me?</label>
+    <textarea name="textMessage" id="comment-modal-send-message" cols="30" rows="10"></textarea>
+    <div class="modal-register__ckeckbox">
+        <input class="custom-checkbox-mini-input" type="checkbox" id="checkbox-modal-send-message">
+        <label class="custom-checkbox-mini" for="checkbox-modal-send-message">Clicking on the button, you consent to the processing of your personal data.</label>
+    </div>
+    <button type="submit" class="btn-white modal-content__button">Send</button>
+    </form>
+    <svg class="modal-close" width="26" height="26" viewBox="0 0 26 26" fill="#828282">
+        <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)"/>
+        <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)"/>
+    </svg>
+    </div>
+</div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
