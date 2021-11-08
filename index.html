@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="common.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="static/fonts/gilroy.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <title>Main</title>
+  </head>
+  <body class="main">
+    
+<header class="grid">
+  <button type="button" class="header-menu js-header-menu">
+    <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
+      <rect y="6.10352e-05" width="32" height="4" rx="2" fill="#070707"/>
+      <rect y="8.00006" width="32" height="4" rx="2" fill="#070707"/>
+      <rect y="16.0001" width="32" height="4" rx="2" fill="#070707"/>
+    </svg>
+  </button>
+  <nav class="navigation">
+    <ul class="nav-list no-dots">
+      <li class="nav-list__item"><a href="pages/blog/index.html">My Blog</a></li>
+      <li class="nav-list__item"><button class="button-js-signIn"  type="button">Sign in</button></li>
+      <li class="nav-list__item"><button class="button-js-register"  type="button">Register</button></li>
+      <li class="nav-list__item js-profile-link hidden"><a href="pages/profile/index.html">My Profile</a></li>
+      </ul>
+    <a class="navigation__home" href="#">Home</a> 
+</nav>
+
+</header>
+
+<div class="mobile-menu">
+  <svg class="mobile-menu__close modal-close" width="26" height="26" viewBox="0 0 26 26" fill="none">
+    <rect x="3.37256" width="32" height="4" rx="2" transform="rotate(45 3.37256 0)" fill="#070707"/>
+    <rect x="0.543945" y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0.543945 22.6289)" fill="#070707"/>
+  </svg>
+    <ul class="mobile-menu__list no-dots">
+      <li class="mobile-menu__item"><a href="/">Home</a></li>
+      <li class="mobile-menu__item"><a href="pages/blog/index.html">My Blog</a></li>
+      <li class="mobile-menu__item"><button class="button-js-signIn">Sign in</button></li>
+      <li class="mobile-menu__item"><button class="button-js-register">Register</button></li>
+      <li class="mobile-menu__item"><a href="pages/profile/index.html">My Profile</a></li>
+    </ul>
+</div>
+
+    <main class="">
+      <div class="grid scroll">
+        <button type="button" class="btn-scroll-up">
+          <img src="static/images/scroll-btn.svg" alt="">
+        </button>
+      </div>
+
+      <section class="grid main-picture-slider">
+    <div class="slider-title">
+        <h1 class="slider-title__heading">Sergey</br>AleeV</h1>
+        <p class="slider-title__text">Future front-end developer 21 years old, Tolyatti</p> 
+    </div>
+    <div class="slider">
+        <div class="slider__wrapper">
+            <div class="slider__pic">
+                <picture class="slider__slide">    
+                    <source srcset="static/images/SliderPics/MyPicture1.jpg" media="(min-width:770px)">
+                    <source srcset="static/images/SliderPics/MyPicture1-tablet.jpg" media="(min-width:401px) and (max-width:769px)">
+                    <source srcset="static/images/SliderPics/MyPicture1-mobile.jpg" media="(min-width:319px) and (max-width:400px)">
+                    <img src="static/images/SliderPics/MyPicture1.jpg" alt="My Picture">
+                </picture>
+                <picture class="slider__slide">
+                    <source srcset="static/images/SliderPics/MyPicture2.jpg" media="(min-width:770px)">
+                    <source srcset="static/images/SliderPics/MyPicture2-tablet.jpg" media="(min-width:401px) and (max-width:769px)">
+                    <source srcset="static/images/SliderPics/MyPicture2-mobile.jpg" media="(min-width:319px) and (max-width:400px)">
+                    <img src="static/images/SliderPics/MyPicture2.jpg" alt="My Picture">
+                </picture>
+                <picture class="slider__slide">
+                    <source srcset="static/images/SliderPics/MyPicture3.jpg" media="(min-width:770px)">
+                    <source srcset="static/images/SliderPics/MyPicture3-tablet.jpg" media="(min-width:401px) and (max-width:769px)">
+                    <source srcset="static/images/SliderPics/MyPicture3-mobile.jpg" media="(min-width:319px) and (max-width:400px)">
+                    <img src="static/images/SliderPics/MyPicture3.jpg" alt="My Picture">
+                </picture>
+            </div>
+        </div>
+        <div class="slider__controls">
+            <button class="slider-button slider-button_left">
+                <svg width="15" height="24" viewBox="0 0 15 24" fill="#070707">
+                    <rect x="12.5791" y="23.6992" width="16.5512" height="3" rx="1.5" transform="rotate(-135 12.5791 23.6992)"/>
+                    <rect x="14.7002" y="2.41992" width="16.5512" height="3" rx="1.5" transform="rotate(135 14.7002 2.41992)"/>
+                    </svg>                    
+            </button>
+            <div class="slider-radio-buttons">
+                <input class="custom-radio" type="radio" id="slider-controls-radio1" name="sliderControlsRadio" checked>
+                <label for="slider-controls-radio1">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="#E5E5E5">
+                        <circle cx="5" cy="5.00006" r="5"/>
+                    </svg>
+                </label>
+                <input class="custom-radio" type="radio" id="slider-controls-radio2" name="sliderControlsRadio">
+                <label for="slider-controls-radio2">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="#E5E5E5">
+                        <circle cx="5" cy="5.00006" r="5"/>
+                    </svg>
+                </label>
+                <input class="custom-radio" type="radio" id="slider-controls-radio3" name="sliderControlsRadio">
+                <label for="slider-controls-radio3">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="#E5E5E5">
+                        <circle cx="5" cy="5.00006" r="5"/>
+                    </svg>
+                </label>
+            </div>
+            <button class="slider-button slider-button_right">
+                <svg width="15" height="24" viewBox="0 0 15 24" fill="#070707">
+                    <rect x="2.4209" y="0.300842" width="16.5512" height="3" rx="1.5" transform="rotate(45 2.4209 0.300842)"/>
+                    <rect x="0.299805" y="21.5801" width="16.5512" height="3" rx="1.5" transform="rotate(-45 0.299805 21.5801)"/>
+                    </svg>                    
+            </button>
+        </div>
+    </div>
+</section>
+
+      <div class="another-background">
+        <section class="chatAbout grid">
+    <h2 class="chatAbout__title">About me</h2>
+<div class="chat">
+    <div class="chat__item">
+        <p class="chat__text">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+    </div>
+    <div class="chat__item">
+    <p class="chat__text">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>            
+    </div>
+    <div class="chat__item">
+            <p class="chat__text">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+        </div>
+        
+</div>
+
+</section>
+      </div>
+
+      <section class="skills-list grid">
+    <h2 class="skills-list__title">Skills</h2>
+    <p class="skills-list__text">I work in such programs as</p>
+    <div class="skills-list__container container">
+        <div class="row flex-wrap">
+        <div class="col-lg-3 col-md-3 col-sm-6">
+<div class="skills-card">
+    <img src="static/images/skillsImages/skillsPicture1.svg" alt="HTML5">
+    <p class="skills-card__text">HTML5</p>
+    <div class="skill-card__bar">
+        <p>85%</p>
+        <svg class="skill-card__svg" width="142" height="9" viewBox="0 0 142 9" fill="none">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="85%" height="9" fill="#070707"/>
+        </svg>
+    </div>
+</div>
+</div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+<div class="skills-card">
+    <img src="static/images/skillsImages/skillsPicture2.svg" alt="CSS/SCSS">
+    <p class="skills-card__text">CSS/SCSS</p>
+    <div class="skill-card__bar">
+        <p>85%</p>
+        <svg class="skill-card__svg" width="142" height="9" viewBox="0 0 142 9" fill="none">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="85%" height="9" fill="#070707"/>
+        </svg>
+    </div>
+</div>
+</div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+<div class="skills-card">
+    <img src="static/images/skillsImages/skillsPicture3.svg" alt="JavaScript">
+    <p class="skills-card__text">JavaScript</p>
+    <div class="skill-card__bar">
+        <p>25%</p>
+        <svg class="skill-card__svg" width="142" height="9" viewBox="0 0 142 9" fill="none">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="25%" height="9" fill="#070707"/>
+        </svg>
+    </div>
+</div>
+</div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+<div class="skills-card">
+    <img src="static/images/skillsImages/skillsPicture4.png" alt="Git/GitHub">
+    <p class="skills-card__text">Git/GitHub</p>
+    <div class="skill-card__bar">
+        <p>15%</p>
+        <svg class="skill-card__svg" width="142" height="9" viewBox="0 0 142 9" fill="none">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="15%" height="9" fill="#070707"/>
+        </svg>
+    </div>
+</div>
+</div>
+        <div class="col-lg-3 col-md-3 col-sm-6">
+<div class="skills-card">
+    <img src="static/images/skillsImages/skillsPicture5.svg" alt="Figma">
+    <p class="skills-card__text">Figma</p>
+    <div class="skill-card__bar">
+        <p>90%</p>
+        <svg class="skill-card__svg" width="142" height="9" viewBox="0 0 142 9" fill="none">
+            <rect width="142" height="9" fill="#E5E5E5"/>
+            <rect width="90%" height="9" fill="#070707"/>
+        </svg>
+    </div>
+</div>
+</div>
+    </div>
+    </div>
+</section>
+
+      <div class="another-background">
+        <section class="portfolio">
+    <h2 class="portfolio__title">Portfolio</h2>
+    <div class="slider-portfolio">
+    <div class="portfolio__slider swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <picture>
+                    <source srcset="static/images/PortfolioSlider/portfolioPic1.jpg, static/images/PortfolioSlider/portfolioPic1-2x.jpg 2x" media="(min-width:841px)">
+                    <source srcset="static/images/PortfolioSlider/portfolioPic1-tablet.jpg, static/images/PortfolioSlider/portfolioPic1-tablet-2x.jpg 2x" media="(min-width:591px) and (max-width:840px)">
+                    <source srcset="static/images/PortfolioSlider/portfolioPic1-mobile.jpg, static/images/PortfolioSlider/portfolioPic1-mobile-2x.jpg 2x" media="(min-width:319px) and (max-width:590px)">
+                    <img src="static/images/PortfolioSlider/portfolioPic1.jpg" alt="">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source srcset="static/images/PortfolioSlider/portfolioPic1.jpg, static/images/PortfolioSlider/portfolioPic1-2x.jpg 2x" media="(min-width:841px)">
+                    <source srcset="static/images/PortfolioSlider/portfolioPic1-tablet.jpg, static/images/PortfolioSlider/portfolioPic1-tablet-2x.jpg 2x" media="(min-width:591px) and (max-width:840px)">
+                    <source srcset="static/images/PortfolioSlider/portfolioPic1-mobile.jpg, static/images/PortfolioSlider/portfolioPic1-mobile-2x.jpg 2x" media="(min-width:319px) and (max-width:590px)">
+                    <img src="static/images/PortfolioSlider/portfolioPic1.jpg" alt="">
+                </picture>
+            </div>
+        </div>
+
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next">
+        </div>
+        <div class="slider-description">
+            <h3 class="slider-description__title">Learning site for DL Academy courses</h3>
+            <p class="slider-description__text">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+        </div>
+    </div>
+    </div>
+</section>
+      </div>
+
+    </main>
+    <footer>
+  <div class="contacts">
+    <h2 class="contacts__heading">Contacts</h2>
+    <p class="contacts__text">Want to know more or just chat?You are welcome!</p>
+    <button type="button" class="contacts__button btn-black button-js-send-message">Send message</button>
+  </div>
+  <div class="social">
+    <a href="https://www.instagram.com/serg_aleev/" class="social__item btn-white" target="_blank">Instagram</a>
+    <a href="https://vk.com/id155280580" class="social__item btn-white" target="_blank">Vk</a>
+    <a href="#" class="social__item btn-white">Telegram</a>
+    <a href="#" class="social__item btn-white">Mail</a>
+    <a href="https://github.com/SergeyAleev" class="social__item btn-white" target="_blank">GitHub</a>
+    <a href="#" class="social__item btn-white">Phone</a>
+  </div>
+  <div class="copyright">
+    <p class="copyright__first-line">Design by <a href="https://dlacademy.ru/" class="underline" target="_blank">DL Academy</a></p>
+    <p>Program code from Sergey</p>
+  </div>
+</footer>
+
+    
+    <div class="modal-background modal-sign-in">
+    <div class="modal-popup">
+        <form action="#" class="modal-content js-login-form">
+            <label for="email-modal-sign-in">Email<span class="required-field">*</span></label>
+            <input type="text" id="email-modal-sign-in" name="emailLog" class="custom-input required email">
+            <label for="password-modal-sign-in">Password<span class="required-field">*</span></label>
+            <input type="password" id="password-modal-sign-in" name="passwordLog" class="custom-input required">
+            <button type="submit" class="btn-white modal-content__button js-login-submit">Log in</button>
+        </form>
+        <svg class="modal-close" width="26" height="26" viewBox="0 0 26 26" fill="#828282">
+            <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)"/>
+            <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)"/>
+        </svg>    
+    </div>    
+</div>   
+    <div class="modal-background modal-register">
+    <div class="modal-popup">
+    <form class="modal-content js-register" action="">
+        <label for="email-modal-register">Email<span class="required-field">*</span></label>
+        <input type="text" id="email-modal-register" name="email" value="123" class="custom-input email required">
+        <div class="modal-two-column">
+            <div class="modal-row">
+                <label for="name-modal-register">Name<span class="required-field">*</span></label>
+                <input type="text" id="name-modal-register" name="name" class="custom-input required">
+            </div>
+            <div class="modal-row">
+                <label for="surname-modal-register">Surname<span class="required-field">*</span></label>
+                <input type="text" id="surname-modal-register" name="surname" class="custom-input required">
+            </div>
+        </div>
+        <div class="modal-two-column">
+            <div class="modal-row">
+                <label for="password-modal-register">Password<span class="required-field">*</span></label>
+                <input type="text" id="password-modal-register" name="password" class="custom-input required">
+            </div>
+            <div class="modal-row">
+                <label for="repeat-modal-register">Repeat password<span class="required-field">*</span></label>
+                <input type="text" id="repeat-modal-register" name="repeat-password" class="custom-input required">
+            </div>
+        </div>
+        <div class="modal-two-column">
+            <div class="modal-row">
+                <label for="location-modal-register">Location<span class="required-field">*</span></label>
+                <input type="text" id="location-modal-register" name="location" class="custom-input required">
+            </div>
+            <div class="modal-row">
+                <label for="age-modal-register">Age<span class="required-field">*</span></label>
+                <input type="text" id="age-modal-register" name="age" class="custom-input age required">
+            </div>
+        </div>
+        <div class="modal-register__ckeckbox">
+            <input class="custom-checkbox-mini-input" type="checkbox" id="checkbox-modal-register" checked>
+            <label class="custom-checkbox-mini" for="checkbox-modal-register">Clicking on the button, you consent to the processing of your personal data.</label>
+        </div>
+        <button type="submit" class="btn-white modal-content__button js-register-submit">Sign up</button>
+
+    </form>
+    <svg class="modal-close" width="26" height="26" viewBox="0 0 26 26" fill="#828282">
+        <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)"/>
+        <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)"/>
+    </svg>
+    </div>
+</div>
+    
+    <div class="modal-background modal-send-message">
+    <div class="modal-popup">
+    <form class="modal-content js-send-message" action="">
+    <div class="modal-two-column">
+        <div class="modal-row">
+            <label for="name-modal-sendMessage">What is your name?<span class="required-field">*</span></label>
+            <input type="text" id="name-modal-send-message" name="nameMessage" class="custom-input required">
+        </div>
+
+        <div class="modal-row">
+            <label for="subject-modal-send-message">Message subject<span class="required-field">*</span></label>
+            <input type="text" id="subject-modal-send-message" name="subjectMessage" class="custom-input required">
+        </div>
+    </div>
+    <div class="modal-two-column">
+        <div class="modal-row">
+            <label for="email-modal-send-message">Your Email<span class="required-field">*</span></label>
+            <input type="text" id="email-modal-send-message" name="emailMessage" class="custom-input email required">
+        </div>
+        <div class="modal-row">
+            <label for="phone-modal-send-message">Your mobile phone<span class="required-field">*</span></label>
+            <input type="phone" id="phone-modal-send-message" name="phoneMessage" class="custom-input required"> 
+        </div>
+
+    </div>
+    <label for="comment-modal-send-send-message">What do you want to discuss with me?</label>
+    <textarea name="textMessage" id="comment-modal-send-message" cols="30" rows="10"></textarea>
+    <div class="modal-register__ckeckbox">
+        <input class="custom-checkbox-mini-input" type="checkbox" id="checkbox-modal-send-message">
+        <label class="custom-checkbox-mini" for="checkbox-modal-send-message">Clicking on the button, you consent to the processing of your personal data.</label>
+    </div>
+    <button type="submit" class="btn-white modal-content__button">Send</button>
+    </form>
+    <svg class="modal-close" width="26" height="26" viewBox="0 0 26 26" fill="#828282">
+        <rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)"/>
+        <rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)"/>
+    </svg>
+    </div>
+</div>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+
+  </body>
+</html>
